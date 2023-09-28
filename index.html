@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        form {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 55px;
+                font-size: 14px;
+        }
+        form div {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 6px;
+            position: relative;
+            padding-top: 54px;
+        }
+        form div input {
+            all: upset;
+            padding: 12px 20px;
+            border: 1px solid gray;
+            border-radius: 4px;
+        }
+
+        form div::after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-image: url('./error\ warning.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            position: absolute;
+            top: 35px;
+            right: -25px;
+            opacity: 0;
+        }
+
+        .required {
+            color: blue !important;
+        }
+        .required input {
+            border-color: blue;
+        }
+        .error {
+            color: red !important;
+        }
+        .error::after {
+            opacity: 1;
+        }
+        .error input {
+            border-color: red;
+        }
+    </style>
+
+</head>
+<body>
+
+    <center>
+        <div class="contains">
+            <h1 class="form_text">Example Form</h1>
+            <div class="flex">
+                <p class="">All: 0</p>
+                <p claNeed: 12</p>
+                <p cl>Success: 0/12</p>
+                <p cl>Error: 0/12</p>
+            </div>
+        </div>
+    </center>
+
+    <form name="signup">
+
+        <div class="left">
+            <div class="required">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="Name">
+                <span class="error-text">Need to fill</span>
+            </div>
+            <div>
+                <label for="surname">Surname</label>
+                <input type="text" id="name" name="Name">
+            </div>
+            <div class="required">
+                <label for="name">Email adress</label>
+                <input type="text" id="surname" name="surname">
+                <span class="error-text">Need to fill</span>
+            </div>
+            <div>
+                <label for="name">Phone number</label>
+                <input type="text" id="name" name="Name">
+            </div>
+            <div>
+                <label for="name">Your Moms name</label>
+                <input type="text" id="name" name="Name">
+            </div>
+            <div>
+                <label for="name">Your Paps name</label>
+                <input type="text" id="name" name="Name">
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="required">
+                <label for="age">Age</label>
+                <input type="text" id="age" name="age">
+                <span class="error-text">Need to fill</span>
+            </div>
+            <div>
+                <label for="name">About you</label>
+                <input type="text" id="name" name="Name">
+                <span class="error-text">Need to fill</span>
+            </div>
+            <div>
+                <label for="name">What is Javascript</label>
+                <input type="text" id="name" name="Name">
+                <span class="error-text">Need to fill</span>
+            </div>
+            <div>
+                <label for="name">What is HTML</label>
+                <input type="text" id="name" name="Name">
+                <span class="error-text">Need to fill</span>
+            </div>
+            <div>
+                <label for="name">What is css</label>
+                <input type="text" id="name" name="Name">
+                <span class="error-text">Need to fill</span>
+            </div>
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="Name">
+            </div>
+        </div>
+        <button>Submit</button>
+
+    </form>
+
+    
+
+    <script src="index.js"></script>
+    
+</body>
+</html>
